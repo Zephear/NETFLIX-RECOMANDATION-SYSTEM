@@ -1,0 +1,222 @@
+==========================================
+ SIMPLE CONTENT-BASED MODEL: FINAL METRICS
+==========================================
+RMSE        : 0.8540
+MAE         : 0.6418
+------------------------------------------
+Precision@10: 0.5730
+Recall@10   : 0.8020
+==========================================
+
+==============================================================
+ RECOMMENDATIONS: SIMPLE CONTENT-BASED MODEL
+==============================================================
+
+[COLD START]
+User visited the 'Inception' movie page.
+Original Genres: Action, Science Fiction, Adventure
+The system recommends similar movies:
+   1. Don Jon                                  | Similarity: 0.129 | Genres: Romance, Comedy, Drama
+   2. The Dark Knight Rises                    | Similarity: 0.112 | Genres: Action, Crime, Drama, Thriller
+   3. The Revenant                             | Similarity: 0.108 | Genres: Western, Drama, Adventure
+   4. The Audition                             | Similarity: 0.105 | Genres: Comedy
+   5. Mission: Impossible - Rogue Nation       | Similarity: 0.104 | Genres: Action, Adventure
+   6. Tenet                                    | Similarity: 0.099 | Genres: Action, Thriller, Science Fiction
+   7. The East                                 | Similarity: 0.094 | Genres: Drama, Thriller
+   8. Interstellar: Nolan's Odyssey            | Similarity: 0.092 | Genres: Documentary, TV Movie
+   9. Looper                                   | Similarity: 0.088 | Genres: Action, Thriller, Science Fiction
+  10. Project Power                            | Similarity: 0.087 | Genres: Action, Crime, Science Fiction
+
+[WARM START]
+Analyzing the active user profile (ID=22744)
+Their favorite movies (Rating 4.5+):
+   The Expendables 2                        | Genres: Action, Adventure, Thriller
+   Paddington                               | Genres: Comedy, Adventure, Family
+   Pokémon Detective Pikachu                | Genres: Action, Adventure, Fantasy
+   Your Name.                               | Genres: Animation, Romance, Drama
+   Zootopia                                 | Genres: Animation, Adventure, Family, Comedy
+
+The simple content-based model predicts the highest ratings for (Top 10):
+   1. Seoul Station                            | Prediction: 2.96 | Genres: Animation, Horror, Science Fiction, Action, Thriller
+   2. Proof of Us                              | Prediction: 2.96 | Genres: Animation
+   3. Bestseller                               | Prediction: 2.94 | Genres: Horror, Thriller, Mystery
+   4. No Mercy                                 | Prediction: 2.93 | Genres: Crime, Thriller, Mystery
+   5. Perfect Number                           | Prediction: 2.91 | Genres: Thriller, Mystery
+   6. High & Low The Worst                     | Prediction: 2.91 | Genres: Action
+   7. My Wife and Friends                      | Prediction: 2.91 | Genres: Romance
+   8. Ashfall                                  | Prediction: 2.91 | Genres: Action, Adventure, Thriller
+   9. Chunin Exam on Fire! and Naruto vs. Konohamaru! | Prediction: 2.90 | Genres: Animation, Action
+  10. Iris: The Movie                          | Prediction: 2.90 | Genres: Action, Adventure
+
+==============================================================
+
+==========================================
+ SIMPLE COLLABORATIVE MODEL: FINAL METRICS
+==========================================
+RMSE        : 0.8478
+MAE         : 0.6342
+------------------------------------------
+Precision@10: 0.5963
+Recall@10   : 0.8194
+==========================================
+
+==============================================================
+ RECOMMENDATIONS: SIMPLE COLLABORATIVE MODEL
+==============================================================
+
+[COLD START]
+User visited the 'Inception' movie page.
+The system recommends similar movies (item-item cosine similarity):
+   1. Interstellar                             | Similarity: 0.619
+   2. The Dark Knight Rises                    | Similarity: 0.578
+   3. Shutter Island                           | Similarity: 0.572
+   4. Django Unchained                         | Similarity: 0.558
+   5. The Martian                              | Similarity: 0.538
+   6. The Wolf of Wall Street                  | Similarity: 0.529
+   7. Guardians of the Galaxy                  | Similarity: 0.506
+   8. The Imitation Game                       | Similarity: 0.503
+   9. The Avengers                             | Similarity: 0.502
+  10. Ex Machina                               | Similarity: 0.487
+
+[WARM START]
+Analyzing the active user profile (ID=22744)
+Their favorite movies (Rating 4.5+):
+   The Expendables 2                        | Rating: 5.0
+   Paddington                               | Rating: 5.0
+   Pokémon Detective Pikachu                | Rating: 5.0
+   Your Name.                               | Rating: 5.0
+   Zootopia                                 | Rating: 5.0
+
+The simple collaborative model predicts the highest scores for (Top 10):
+   1. The Avengers                             | Score: 453.84
+   2. Guardians of the Galaxy                  | Score: 449.39
+   3. Deadpool                                 | Score: 449.29
+   4. Thor                                     | Score: 449.23
+   5. Avengers: Age of Ultron                  | Score: 447.86
+   6. World War Z                              | Score: 447.24
+   7. Ted                                      | Score: 444.99
+   8. Doctor Strange                           | Score: 444.87
+   9. Captain America: The First Avenger       | Score: 441.82
+  10. Captain America: Civil War               | Score: 440.20
+
+==============================================================
+
+
+==========================================
+ SIMPLE HYBRID MODEL: FINAL METRICS
+==========================================
+RMSE        : 0.8632
+MAE         : 0.6779
+------------------------------------------
+Precision@10: 0.5932
+Recall@10   : 0.8166
+==========================================
+
+==============================================================
+ RECOMMENDATIONS: SIMPLE HYBRID MODEL
+==============================================================
+
+[COLD START]
+New user searches for 'Inception'. The system (Hybrid) recommends:
+   1. Don Jon                                  | Hybrid Score: 0.11 | Genres: Romance, Comedy, Drama
+   2. Mission: Impossible - Rogue Nation       | Hybrid Score: 0.10 | Genres: Action, Adventure
+   3. Tenet                                    | Hybrid Score: 0.10 | Genres: Action, Thriller, Science Fiction
+   4. The Dark Knight Rises                    | Hybrid Score: 0.10 | Genres: Action, Crime, Drama, Thriller
+   5. The East                                 | Hybrid Score: 0.09 | Genres: Drama, Thriller
+   6. The Revenant                             | Hybrid Score: 0.09 | Genres: Western, Drama, Adventure
+   7. Looper                                   | Hybrid Score: 0.08 | Genres: Action, Thriller, Science Fiction
+   8. Dunkirk                                  | Hybrid Score: 0.08 | Genres: War, Action, Drama
+   9. Snowden                                  | Hybrid Score: 0.08 | Genres: Drama, History, Crime, Thriller
+  10. Possessor                                | Hybrid Score: 0.07 | Genres: Horror, Thriller, Science Fiction
+
+[WARM START]
+Analyzing the active user profile (ID=22744)
+Their favorite movies (Rating 4.5+):
+   The Expendables 2                        | Genres: Action, Adventure, Thriller
+   Paddington                               | Genres: Comedy, Adventure, Family
+   Pokémon Detective Pikachu                | Genres: Action, Adventure, Fantasy
+   Your Name.                               | Genres: Animation, Romance, Drama
+   Zootopia                                 | Genres: Animation, Adventure, Family, Comedy
+
+The simple hybrid model predicts the highest ratings for (Top 10):
+   1. Everything Everywhere All at Once        | Prediction: 2.59 | Genres: Action, Adventure, Science Fiction
+   2. Spider-Man: Across the Spider-Verse      | Prediction: 2.58 | Genres: Animation, Action, Adventure, Science Fiction
+   3. Guardians of the Galaxy                  | Prediction: 2.57 | Genres: Action, Science Fiction, Adventure
+   4. The Boy and the Beast                    | Prediction: 2.56 | Genres: Action, Adventure, Animation, Drama, Family, Fantasy
+   5. Wild Tales                               | Prediction: 2.56 | Genres: Drama, Thriller, Comedy
+   6. AlphaGo                                  | Prediction: 2.55 | Genres: Documentary
+   7. John Mulaney: New in Town                | Prediction: 2.55 | Genres: Comedy
+   8. Puss in Boots: The Last Wish             | Prediction: 2.55 | Genres: Animation, Adventure, Fantasy, Comedy, Family
+   9. The Body                                 | Prediction: 2.55 | Genres: Thriller, Mystery
+  10. Interstellar                             | Prediction: 2.55 | Genres: Adventure, Drama, Science Fiction
+
+==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================================
+ SIMPLE COLLABORATIVE MODEL: FINAL METRICS
+==========================================
+RMSE        : 0.8478
+MAE         : 0.6342
+------------------------------------------
+Precision@10: 0.0372
+Recall@10   : 0.0354
+NDCG@10     : 0.0453
+==========================================
+
+==============================================================
+ RECOMMENDATIONS: SIMPLE COLLABORATIVE MODEL
+==============================================================
+
+[COLD START]
+User visited the 'Inception' movie page.
+The system recommends similar movies (item-item cosine similarity):
+   1. Interstellar                             | Similarity: 0.619
+   2. The Dark Knight Rises                    | Similarity: 0.578
+   3. Shutter Island                           | Similarity: 0.572
+   4. Django Unchained                         | Similarity: 0.558
+   5. The Martian                              | Similarity: 0.538
+   6. The Wolf of Wall Street                  | Similarity: 0.529
+   7. Guardians of the Galaxy                  | Similarity: 0.506
+   8. The Imitation Game                       | Similarity: 0.503
+   9. The Avengers                             | Similarity: 0.502
+  10. Ex Machina                               | Similarity: 0.487
+
+[WARM START]
+Analyzing the active user profile (ID=22744)
+Their favorite movies (Rating 4.5+):
+   The Expendables 2                        | Rating: 5.0
+   Paddington                               | Rating: 5.0
+   Pokémon Detective Pikachu                | Rating: 5.0
+   Your Name.                               | Rating: 5.0
+   Zootopia                                 | Rating: 5.0
+
+The simple collaborative model predicts the highest scores for (Top 10):
+   1. The Avengers                             | Score: 453.84
+   2. Guardians of the Galaxy                  | Score: 449.39
+   3. Deadpool                                 | Score: 449.29
+   4. Thor                                     | Score: 449.23
+   5. Avengers: Age of Ultron                  | Score: 447.86
+   6. World War Z                              | Score: 447.24
+   7. Ted                                      | Score: 444.99
+   8. Doctor Strange                           | Score: 444.87
+   9. Captain America: The First Avenger       | Score: 441.82
+  10. Captain America: Civil War               | Score: 440.20
+
+==============================================================

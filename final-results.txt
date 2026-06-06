@@ -1,0 +1,162 @@
+--------------------------------------------------------
+DATA: 1,562,326 ratings | 20,381 users | 1,867 movies  
+--------------------------------------------------------
+
+==============================================================================================================================
+Content-based model
+==========================================
+[METRICS]
+
+RMSE: 0.8491
+MAE: 0.6365
+---------------------
+Precision@10: 0.5736
+Recall@10: 0.8032
+==========================================
+
+============================================================
+Recomendations Content-based model
+============================================================
+[COLD START]
+User visited the 'Inception' movie page.
+Original Genres: Action, Science Fiction, Adventure
+The system recommends similar movies:
+  1. Venom: Let There Be Carnage          | Genres: Science Fiction, Action, Adventure
+  2. Venom: The Last Dance                | Genres: Action, Science Fiction, Adventure
+  3. The Creator                          | Genres: Science Fiction, Action, Adventure
+  4. Mad Max: Fury Road                   | Genres: Action, Adventure, Science Fiction
+  5. Guardians of the Galaxy              | Genres: Action, Science Fiction, Adventure
+  6. The Amazing Spider-Man 2             | Genres: Action, Adventure, Science Fiction
+  7. Ant-Man                              | Genres: Science Fiction, Action, Adventure
+  8. After Earth                          | Genres: Science Fiction, Action, Adventure
+  9. The Call Up                          | Genres: Adventure, Action, Science Fiction
+ 10. Gatchaman                            | Genres: Action, Adventure, Science Fiction
+
+[WARM START]
+Analyzing the active user profile (ID=22744)
+Their favorite movies (Rating 4.5+):
+   The Expendables 2                | Genres: Action, Adventure, Thriller 
+   Paddington                       | Genres: Comedy, Adventure, Family   
+   Pokémon Detective Pikachu        | Genres: Action, Adventure, Fantasy, Comedy, Family 
+   Your Name.                       | Genres: Animation, Romance, Drama, Fantasy 
+   Zootopia                         | Genres: Animation, Adventure, Family, Comedy
+
+The content-based model predicts the highest ratings for (Top 10)::
+  1. Miraculous: Tales of Ladybug & Cat Noir                               | Genres: Animation
+  2. Touken Ranbu Kai: Douden Chikashi Haberau Monora                      | Genres: Animation
+  3. Proof of Us                                                           | Genres: Animation
+  4. Crayon Shin-chan: Shrouded in Mystery! The Flowers of Tenkazu Academy | Genres: Animation
+  5. Crayon Shin-chan: Very Tasty! B-class Gourmet Survival!!              | Genres: Animation
+  6. The Prophet                                                           | Genres: Animation
+  7. Koati                                                                 | Genres: Animation
+  8. Spinning                                                              | Genres: Animation
+  9. LEGO DC Super Hero Girls: Brain Drain                                 | Genres: Animation
+ 10. Fresh Guacamole                                                       | Genres: Animation
+==============================================================================================================================
+
+
+==============================================================================================================================
+Colaborative model
+==================================================
+[METRICS]
+
+RMSE        : 0.7689
+MAE         : 0.5713
+---------------------
+Precision@10: 0.5976
+Recall@10   : 0.8202
+==========================================
+
+============================================================
+Recomendations Colaborative model
+============================================================
+[COLD START]
+New user with no rating history. The system recommends (Bayesian Average):
+  1. Parasite                                 (Rating: 4.19) | Gener: Comedy, Thriller, Drama
+  2. Inception                                (Rating: 4.14) | Gener: Action, Science Fiction, Adventure
+  3. Interstellar                             (Rating: 4.10) | Gener: Adventure, Drama, Science Fiction
+  4. Whiplash                                 (Rating: 4.09) | Gener: Drama, Music
+  5. Spider-Man: Into the Spider-Verse        (Rating: 4.05) | Gener: Action, Adventure, Animation, Science Fiction
+  6. The Intouchables                         (Rating: 4.04) | Gener: Drama, Comedy
+  7. Arrival                                  (Rating: 3.99) | Gener: Drama, Science Fiction, Mystery
+  8. The Martian                              (Rating: 3.99) | Gener: Drama, Adventure, Science Fiction
+  9. Django Unchained                         (Rating: 3.98) | Gener: Drama, Western
+ 10. The Big Short                            (БRating: 3.98)| Gener: Comedy, Drama
+
+[WARM START]
+Analyzing the active user profile (ID=22744)
+Their favorite movies (Rating 4.5+):
+   The Expendables 2                | Genres: Action, Adventure, Thriller 
+   Paddington                       | Genres: Comedy, Adventure, Family   
+   Pokémon Detective Pikachu        | Genres: Action, Adventure, Fantasy, Comedy, Family 
+   Your Name.                       | Genres: Animation, Romance, Drama, Fantasy 
+   Zootopia                         | Genres: Animation, Adventure, Family, Comedy
+
+  1. Ted                                      | Prediction: 4.750
+  2. The Expendables                          | Prediction: 4.378
+  3. Avengers: Infinity War                   | Prediction: 4.320
+  4. Mortal Kombat                            | Prediction: 3.858
+  5. The Avengers                             | Prediction: 4.331
+  6. The Dark Knight Rises                    | Prediction: 4.051
+  7. Puss in Boots: The Last Wish             | Prediction: 3.876
+  8. Arthur                                   | Prediction: 3.783
+  9. God's Not Dead                           | Prediction: 3.860
+ 10. Mad Max: Fury Road                       | Prediction: 3.703
+
+==============================================================================================================================
+                                                                                                                                                              
+  ==============================================================================================================================
+  Hybrid model 
+  ==========================================
+  RMSE: 0.7792
+  MAE: 0.5758
+  ------------------------------------------
+  Precision@10: 0.5970
+  Recall@10: 0.8197
+  ==========================================
+
+  ============================================================
+  Recomendations Hybrid model
+  ============================================================
+  [COLD START]
+  New user searches for 'Inception'. The system (Hybrid) recommends:
+
+    1. Mad Max: Fury Road                  | Hybrid Score: 0.92 | Genres: Action, Adventure, Science Fiction
+    2. Spider-Man: No Way Home             | Hybrid Score: 0.85 | Genres: Action, Adventure, Science Fiction
+    3. Thor: Ragnarok                      | Hybrid Score: 0.84 | Genres: Action, Adventure, Science Fiction
+    4. Spider-Man: Far From Home           | Hybrid Score: 0.82 | Genres: Action, Adventure, Science Fiction
+    5. Venom: Let There Be Carnage         | Hybrid Score: 0.81 | Genres: Science Fiction, Action, Adventure
+    6. Guardians of the Galaxy             | Hybrid Score: 0.74 | Genres: Action, Science Fiction, Adventure
+    7. Looper                              | Hybrid Score: 0.74 | Genres: Action, Thriller, Science Fiction
+    8. Guardians of the Galaxy Vol. 2      | Hybrid Score: 0.73 | Genres: Science Fiction, Adventure, Action
+    9. Oblivion                            | Hybrid Score: 0.72 | Genres: Action, Science Fiction, Adventure, Mystery
+  10. Star Trek Into Darkness             | Hybrid Score: 0.72 | Genres: Action, Adventure, Science Fiction
+
+  [WARM START]
+  Analyzing the active user profile (ID=22744)
+  Their favorite movies (Rating 4.5+):
+    The Expendables 2                | Genres: Action, Adventure, Thriller 
+    Paddington                       | Genres: Comedy, Adventure, Family   
+    Pokémon Detective Pikachu        | Genres: Action, Adventure, Fantasy, Comedy, Family 
+    Your Name.                       | Genres: Animation, Romance, Drama, Fantasy 
+    Zootopia                         | Genres: Animation, Adventure, Family, Comedy
+
+  The Hybrid Model (XGBoost) predicts for them (Top 10):
+    1. Avengers: Infinity War              | XGB Prediction: 4.67 | Genres: Adventure, Action, Science Fiction
+    2. Ted                                 | XGB Prediction: 4.65 | Genres: Comedy, Fantasy
+    3. The Avengers                        | XGB Prediction: 4.53 | Genres: Science Fiction, Action, Adventure
+    4. The Dark Knight Rises               | XGB Prediction: 4.46 | Genres: Action, Crime, Drama, Thriller
+    5. Captain America: Civil War          | XGB Prediction: 4.26 | Genres: Adventure, Action, Science Fiction
+    6. Spider-Man: No Way Home             | XGB Prediction: 4.26 | Genres: Action, Adventure, Science Fiction
+    7. The Expendables                     | XGB Prediction: 4.22 | Genres: Thriller, Adventure, Action
+    8. Captain America: The Winter Soldier | XGB Prediction: 4.12 | Genres: Action, Adventure, Science Fiction
+    9. Puss in Boots: The Last Wish        | XGB Prediction: 4.09 | Genres: Animation, Adventure, Fantasy, Comedy, Family
+  10. Captain America: The First Avenger  | XGB Prediction: 4.02 | Genres: Action, Adventure, Science Fiction
+  ==============================================================================================================================
+
+
+
+
+
+
+
